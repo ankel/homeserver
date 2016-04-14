@@ -15,6 +15,13 @@ Disallow password log in, disallow root log in
 * `umask 027`  
 * `setopt nosharehistory`  
 * `w`  
+* 
+```
+zstyle ':completion:*' matcher-list '' \
+'m:{a-z\-}={A-Z\_}' \
+'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+'r:[[:ascii:]]||[[:ascii:]]=** r:|=* m:{a-z\-}={A-Z\_}'
+```
 
 ## Router port forward ssh to a non-standard port
 ## Install HDD monitoring tools:
